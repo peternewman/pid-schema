@@ -183,7 +183,7 @@
         "value": {
           "type": "integer",
           "maximum": 4294967295,
-          "minimum": 0
+          "minimum": -2147483648
         }
       },
       "required": ["label", "value"]
@@ -196,10 +196,14 @@
       "type": "object",
       "properties": {
         "lower": {
-          "type": "integer"
+          "type": "integer",
+          "maximum": 4294967295,
+          "minimum": -2147483648
         },
         "upper": {
-          "type": "integer"
+          "type": "integer",
+          "maximum": 4294967295,
+          "minimum": -2147483648
         }
       },
       "required": ["lower", "upper"]
