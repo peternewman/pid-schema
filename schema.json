@@ -159,6 +159,17 @@
         {
           "properties": {
             "type": {
+              "enum": ["url"]
+            },
+            "name": {
+              "$ref": "#/definitions/name"
+            }
+          },
+          "required": ["name", "type"]
+        },
+        {
+          "properties": {
+            "type": {
               "enum": ["group"]
             },
             "name": {
