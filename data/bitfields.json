@@ -5,7 +5,7 @@
   "get_request": [],
   "get_response": [
     {
-      "type": "bitfield",
+      "type": "bitField",
       "size": 8,
       "bits": [
         {

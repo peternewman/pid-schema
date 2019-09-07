@@ -6,13 +6,11 @@
   "get_response": [
     {
       "name": "devices",
-      "type": "group",
-      "fields": [
-        {
+      "type": "list",
+      "itemType": {
           "name": "uid",
           "type": "uid"
-        }
-      ]
+      }
     }
   ],
   "get_subdevice_range": "root_or_any_subdevice"

@@ -9,8 +9,8 @@
       "type": "uint16",
       "ranges": [
         {
-          "lower": 0,
-          "upper": 512
+          "minimum": 0,
+          "maximum": 512
         }
       ],
       "labels": [
@@ -28,8 +28,8 @@
       "type": "uint16",
       "ranges": [
         {
-          "lower": 0,
-          "upper": 512
+          "minimum": 0,
+          "maximum": 512
         }
       ],
       "labels": [
