@@ -1,8 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Parameter Metadata Language Schema, Informative",
-  "description": "The (informative) schema for the Parameter Metadata Language
-                  from E1.37-5, Section 5. This schema is subject to change.",
+  "description": "The (informative) schema for the Parameter Metadata Language from E1.37-5, Section 5. This schema is subject to change.",
   "definitions": {
     "bitType": {
       "description": "Describes the meaning of one bit in a bit field.",
@@ -34,15 +33,13 @@
       "required": [ "type", "bits" ]
     },
     "commandType": {
-      "description": "Represents an RDM command, a collection of 'field' items,
-                      each a simple or compound type.",
+      "description": "Represents an RDM command, a collection of 'field' items, each a simple or compound type.",
       "type": "array",
       "items": { "$ref": "#/definitions/oneOfTypes" },
       "uniqueItems": true
     },
     "compoundType": {
-      "description": "Defines a compound type, a type used to combine other
-                      types. This is useful for including in lists.",
+      "description": "Defines a compound type, a type used to combine other types. This is useful for including in lists.",
       "type": "object",
       "properties": {
         "name": { "$ref": "#/definitions/nameType" },
@@ -57,8 +54,7 @@
       "required": [ "type", "subtypes" ]
     },
     "integerType": {
-      "description": "A signed or unsigned integer, can have an optional
-                      prefix, unit, and range.",
+      "description": "A signed or unsigned integer, can have an optional prefix, unit, and range.",
       "properties": {
         "name": { "$ref": "#/definitions/nameType" },
         "type": {
@@ -86,9 +82,7 @@
           "maximum": 255
         },
         "ranges": {
-          "description": "A list of possible ranges for the value. The
-                          complete range is the union of all the ranges and
-                          labels.",
+          "description": "A list of possible ranges for the value. The complete range is the union of all the ranges and labels.",
           "type": "array",
           "items": { "$ref": "#/definitions/rangeType" },
           "uniqueItems": true
@@ -139,8 +133,7 @@
       "minLength": 1
     },
     "oneOfTypes": {
-      "description": "One of any of the types. This provides a single location
-                      to keep the list.",
+      "description": "One of any of the types. This provides a single location to keep the list.",
       "oneOf": [
         { "$ref": "#/definitions/bitFieldType" },
         { "$ref": "#/definitions/compoundType" },
@@ -153,9 +146,7 @@
       ]
     },
     "subdeviceType": {
-      "description": "A subdevice type. One of the root device (e.g. value 0),
-                      the root or all subdevices or the broadcast subdevice,
-                      the root or any subdevice, or just any subdevice.",
+      "description": "A subdevice type. One of the root device (e.g. value 0), the root or all subdevices or the broadcast subdevice, the root or any subdevice, or just any subdevice.",
       "type" : "string",
       "enum": [
             "root",
@@ -165,10 +156,7 @@
           ]
     },
     "pdEnvelopeType": {
-      "description": "Contains a length/data pair for one Parameter Data item,
-                      where the length is an unsigned 8-bit value and the data
-                      has 'length' bytes. This exists to provide a schema
-                      definition for the 'envelope' of a PDL/PD pair.",
+      "description": "Contains a length/data pair for one Parameter Data item, where the length is an unsigned 8-bit value and the data has 'length' bytes. This exists to provide a schema definition for the 'envelope' of a PDL/PD pair.",
       "type": "object",
       "properties": {
         "type": { "const": "pdEnvelope" },
@@ -196,8 +184,7 @@
       "required": [ "minimum", "maximum" ]
     },
     "simpleType": {
-      "description": "Simple type that has no fields other than a name and
-                      type.",
+      "description": "Simple type that has no fields other than a name and type.",
       "type": "object",
       "properties": {
         "name": { "$ref": "#/definitions/nameType" },
