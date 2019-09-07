@@ -19,7 +19,6 @@
   "immed": true,
   "browser": false,
   "es3": true,
-  "maxlen": 80,
   "nonbsp": true,
   "freeze": true,
   "node": true,
