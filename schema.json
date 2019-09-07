@@ -141,8 +141,7 @@
         { "$ref": "#/definitions/listType" },
         { "$ref": "#/definitions/pdEnvelopeType" },
         { "$ref": "#/definitions/simpleType" },
-        { "$ref": "#/definitions/stringType" },
-        { "$ref": "#/definitions/subdeviceType" }
+        { "$ref": "#/definitions/stringType" }
       ]
     },
     "subdeviceType": {
