@@ -6,7 +6,7 @@
   "dependencies": {
     "grunt": "^1.0.0",
     "grunt-contrib-jshint": "^0.12.0",
-    "grunt-jsonschema-ajv": github:peternewman/grunt-jsonschema-ajv#travis,
+    "grunt-jsonschema-ajv": "github:peternewman/grunt-jsonschema-ajv#travis",
     "ajv": "^6.10.2"
   },
   "scripts": {
