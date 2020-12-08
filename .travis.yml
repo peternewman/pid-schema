@@ -13,8 +13,8 @@ before_install:
 install:
   - if [ "$TASK" = "codespell" ]; then npm install -g grunt-cli; fi
   - if [ "$TASK" = "npm-test" ]; then npm install; fi
-  - if [ "$TASK" = "codespell" ]; then pip install urllib3[secure]; fi
-  - if [ "$TASK" = "codespell" ]; then sudo pip install --upgrade git+https://github.com/codespell-project/codespell.git; fi
+  - if [ "$TASK" = "codespell" ]; then pip3 install urllib3[secure]; fi
+  - if [ "$TASK" = "codespell" ]; then sudo pip3 install --upgrade git+https://github.com/codespell-project/codespell.git; fi
 
 matrix:
   fast_finish: true
@@ -30,10 +30,12 @@ matrix:
           packages:
             - moreutils
     - os: linux
-      dist: trusty
+      dist: xenial
       # Short duration job, use the container/without sudo image as it boots faster
       sudo: required
-      env: TASK='codespell'
+      env:
+        - TASK='codespell'
+        - PATH=/opt/python/3.7.1/bin:$PATH
       addons:
         apt:
           packages:
